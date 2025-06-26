@@ -1,4 +1,4 @@
-<div class="mx-auto w-full rounded-lg border bg-white p-8">
+<div class="mx-auto w-full bg-red-700 p-8">
 	<h1 class="text-4xl font-bold text-slate-900">Hello World!</h1>
 	<p class="mt-4 text-sm leading-relaxed text-slate-600">
 		Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis accumsan, nunc et tempus blandit,

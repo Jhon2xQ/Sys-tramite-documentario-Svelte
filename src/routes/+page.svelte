@@ -6,7 +6,7 @@
 	import Transacciones from './Transacciones.svelte';
 </script>
 
-<div class="flex min-h-screen flex-col bg-gray-100 text-gray-900">
+<div class="flex min-h-screen flex-col bg-black text-gray-900">
 	<!-- Header -->
 	<Header />
 
