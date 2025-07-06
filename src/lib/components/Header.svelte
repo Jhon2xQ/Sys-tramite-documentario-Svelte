@@ -3,11 +3,9 @@
 		<a
 			href="javascript:void(0)"
 			class="max-lg:left-10 max-sm:hidden lg:absolute lg:top-2/4 lg:left-2/4 lg:-translate-x-1/2 lg:-translate-y-1/2"
-			><img src="https://readymadeui.com/readymadeui.svg" alt="logo" class="w-36" />
+		>
 		</a>
-		<a href="javascript:void(0)" class="hidden max-sm:block"
-			><img src="https://readymadeui.com/readymadeui-short.svg" alt="logo" class="w-9" />
-		</a>
+		<a href="javascript:void(0)" class="hidden max-sm:block"> </a>
 
 		<div
 			id="collapseMenu"

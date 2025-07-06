@@ -1,4 +1,4 @@
-<div class="m-8 w-1/3 bg-blue-700 p-6 text-gray-900">
+<div class="text-gray-900">
 	<h2 class="mb-4 text-lg font-semibold">Descripción general de la red</h2>
 	<div class="flex flex-col gap-4">
 		<div>
