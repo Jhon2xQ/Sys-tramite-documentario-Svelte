@@ -1,89 +1,66 @@
-<header class="relative z-50 flex min-h-[70px] bg-white px-4 py-4 tracking-wide shadow-lg sm:px-10">
-	<div class="flex w-full flex-wrap items-center justify-between gap-4">
-		<a
-			href="javascript:void(0)"
-			class="max-lg:left-10 max-sm:hidden lg:absolute lg:top-2/4 lg:left-2/4 lg:-translate-x-1/2 lg:-translate-y-1/2"
-		>
-		</a>
-		<a href="javascript:void(0)" class="hidden max-sm:block"> </a>
+<script lang="ts">
+	let navbarOpen = false;
+	let dropdownOpen = false;
+</script>
 
-		<div
-			id="collapseMenu"
-			class="max-lg:fixed max-lg:hidden max-lg:w-full max-lg:before:fixed max-lg:before:inset-0 max-lg:before:z-50 max-lg:before:bg-black max-lg:before:opacity-50 lg:!block"
-		>
-			<button
-				id="toggleClose"
-				class="fixed top-2 right-4 z-[100] flex h-9 w-9 cursor-pointer items-center justify-center rounded-full border border-gray-200 bg-white lg:hidden"
-			>
-				<svg
-					xmlns="http://www.w3.org/2000/svg"
-					class="h-3.5 w-3.5 fill-black"
-					viewBox="0 0 320.591 320.591"
+<header class="flex w-full items-center bg-[#f4f6f1] lg:px-80">
+	<div class="container">
+		<div class="relative flex items-center justify-between px-4">
+			<div class="w-60">
+				<a href="/" class="block py-5">
+					<img src="/Logo-m-2.png" alt="Logo" class="w-full" />
+				</a>
+			</div>
+			<div class="flex w-full items-center justify-end">
+				<button
+					on:click={() => (navbarOpen = !navbarOpen)}
+					class="rounded px-3 py-2 focus:ring lg:hidden"
 				>
-					<path
-						d="M30.391 318.583a30.37 30.37 0 0 1-21.56-7.288c-11.774-11.844-11.774-30.973 0-42.817L266.643 10.665c12.246-11.459 31.462-10.822 42.921 1.424 10.362 11.074 10.966 28.095 1.414 39.875L51.647 311.295a30.366 30.366 0 0 1-21.256 7.288z"
-						data-original="#000000"
-					></path>
-					<path
-						d="M287.9 318.583a30.37 30.37 0 0 1-21.257-8.806L8.83 51.963C-2.078 39.225-.595 20.055 12.143 9.146c11.369-9.736 28.136-9.736 39.504 0l259.331 257.813c12.243 11.462 12.876 30.679 1.414 42.922-.456.487-.927.958-1.414 1.414a30.368 30.368 0 0 1-23.078 7.288z"
-						data-original="#000000"
-					></path>
-				</svg>
-			</button>
+					<div class="mb-1 h-0.5 w-6 bg-black"></div>
+					<div class="mb-1 h-0.5 w-6 bg-black"></div>
+					<div class="h-0.5 w-6 bg-black"></div>
+				</button>
 
-			<ul
-				class="z-50 max-lg:fixed max-lg:top-0 max-lg:left-0 max-lg:h-full max-lg:w-1/2 max-lg:min-w-[300px] max-lg:space-y-3 max-lg:overflow-auto max-lg:bg-white max-lg:p-6 max-lg:shadow-md lg:flex lg:gap-x-5"
-			>
-				<li class="mb-6 hidden max-lg:block">
-					<a href="javascript:void(0)"
-						><img src="https://readymadeui.com/readymadeui.svg" alt="logo" class="w-36" />
-					</a>
-				</li>
-				<li class="px-3 max-lg:border-b max-lg:border-gray-300 max-lg:py-3">
-					<a
-						href="javascript:void(0)"
-						class="block text-[15px] font-medium text-blue-700 hover:text-blue-700">Home</a
-					>
-				</li>
-				<li class="px-3 max-lg:border-b max-lg:border-gray-300 max-lg:py-3">
-					<a
-						href="javascript:void(0)"
-						class="block text-[15px] font-medium text-slate-900 hover:text-blue-700">Team</a
-					>
-				</li>
-				<li class="px-3 max-lg:border-b max-lg:border-gray-300 max-lg:py-3">
-					<a
-						href="javascript:void(0)"
-						class="block text-[15px] font-medium text-slate-900 hover:text-blue-700">Feature</a
-					>
-				</li>
-				<li class="px-3 max-lg:border-b max-lg:border-gray-300 max-lg:py-3">
-					<a
-						href="javascript:void(0)"
-						class="block text-[15px] font-medium text-slate-900 hover:text-blue-700">Blog</a
-					>
-				</li>
-			</ul>
-		</div>
+				{#if navbarOpen}
+					<nav class="absolute top-full right-4 mt-2 w-48 rounded bg-white p-4 shadow lg:hidden">
+						<ul class="space-y-2">
+							<li><a href="#features" class="block">Features</a></li>
+							<li><a href="#about" class="block">About</a></li>
+							<li><a href="#pricing" class="block">Pricing</a></li>
+							<li><a href="#contact" class="block">Contact</a></li>
+							<li>
+								<button on:click={() => (dropdownOpen = !dropdownOpen)} class="w-full text-left">
+									Pages
+								</button>
+								{#if dropdownOpen}
+									<ul class="mt-2 space-y-1 pl-4">
+										<li><a href="blog-grid.html" class="block">Blog Grid</a></li>
+										<li><a href="blog-details.html" class="block">Blog Details</a></li>
+									</ul>
+								{/if}
+							</li>
+						</ul>
+					</nav>
+				{/if}
 
-		<div class="ml-auto flex items-center space-x-6">
-			<button class="cursor-pointer border-0 text-[15px] font-medium outline-0"
-				><a href="javascript:void(0)" class="text-blue-700 hover:underline">Login</a></button
-			>
-			<button
-				class="cursor-pointer rounded-xs border border-blue-600 bg-blue-600 px-4 py-2 text-sm font-medium text-white hover:bg-blue-700"
-				>Sign up</button
-			>
-
-			<button id="toggleOpen" class="cursor-pointer lg:hidden">
-				<svg class="h-7 w-7" fill="#333" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-					<path
-						fill-rule="evenodd"
-						d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
-						clip-rule="evenodd"
-					></path>
-				</svg>
-			</button>
+				<nav class="hidden lg:block">
+					<ul class="flex space-x-6">
+						<li><a href="#features" class="block py-6">Features</a></li>
+						<li><a href="#about" class="block py-6">About</a></li>
+						<li><a href="#pricing" class="block py-6">Pricing</a></li>
+						<li><a href="#contact" class="block py-6">Contact</a></li>
+						<li class="relative">
+							<button on:click={() => (dropdownOpen = !dropdownOpen)} class="py-6">Pages</button>
+							{#if dropdownOpen}
+								<ul class="absolute mt-2 w-48 space-y-2 rounded bg-white p-4 shadow">
+									<li><a href="blog-grid.html" class="block">Blog Grid</a></li>
+									<li><a href="blog-details.html" class="block">Blog Details</a></li>
+								</ul>
+							{/if}
+						</li>
+					</ul>
+				</nav>
+			</div>
 		</div>
 	</div>
 </header>
