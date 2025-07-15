@@ -1,11 +1,9 @@
 <!-- Contenedor general con fondo -->
-<div class="flex items-center justify-center">
+<div class="items-center justify-center p-8 md:flex">
 	<!-- logo -->
-	<div class="flex w-1/2 flex-col items-center justify-center">
-		<div class="flex items-center justify-center">
-			<img src="/img-tramite.png" alt="Tramite Icon" class="ml-10" />
-		</div>
-		<p class="mt-6 ml-10">
+	<div class="flex flex-col items-center justify-center md:w-1/2">
+		<img src="/img-tramite.png" alt="Tramite Icon" />
+		<p class="mx-4 mt-6">
 			La mesa de tramite virtual esta para servir a sus usarios a realizar sus tramites de la forma
 			mas sencilla y amigable. Siga las intrucciones para realizar su tramite.
 		</p>
@@ -41,7 +39,7 @@
 			</div>
 		</div>
 	</div>
-	<div class="w-1/2">
+	<div class="md:w-1/2">
 		<img src="/opcion-1.png" alt="img-tramite" class="p-10" />
 	</div>
 </div>

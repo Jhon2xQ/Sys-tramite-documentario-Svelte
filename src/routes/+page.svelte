@@ -13,21 +13,26 @@
 
 	<!-- Main -->
 	<main class="bg-cover bg-center" style="background-image: url('31-a.jpeg')">
-		<div class="mx-40 rounded-lg bg-gradient-to-r from-purple-200 via-pink-200 to-red-200">
+		<div
+			class="rounded-lg bg-gradient-to-r from-purple-200 via-pink-200 to-red-200 lg:mx-20 xl:mx-40"
+		>
 			<Opciones />
 		</div>
 
-		<div class="mt-20 flex space-x-8 px-20 pb-20">
-			<div class="w-1/3 space-y-8">
-				<div class="rounded-lg bg-white/80 p-8">
-					<Resumen />
-				</div>
-				<div class="rounded-lg bg-white/80 p-8">
-					<Chat />
-				</div>
+		<div class="space-y-8 p-4 md:p-10 lg:p-10 xl:p-20">
+			<div class="rounded-lg bg-white/80 p-8">
+				<Resumen />
 			</div>
-			<div class="w-2/3 rounded-lg bg-white/80 p-8">
-				<Transacciones />
+
+			<div class="flex flex-col space-y-8 lg:flex-row lg:space-y-0 lg:space-x-8">
+				<div class="order-2 mt-8 lg:order-1 lg:mt-0 lg:w-1/3">
+					<div class="rounded-lg bg-white/80 p-8">
+						<Chat />
+					</div>
+				</div>
+				<div class="order-1 w-full rounded-lg bg-white/80 p-8 lg:order-2 lg:w-2/3">
+					<Transacciones />
+				</div>
 			</div>
 		</div>
 	</main>

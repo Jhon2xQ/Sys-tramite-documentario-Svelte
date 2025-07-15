@@ -1,6 +1,6 @@
 <div class="text-gray-900">
-	<h2 class="mb-4 text-lg font-semibold">Descripción general de la red</h2>
-	<div class="flex flex-col gap-4">
+	<h2 class="mb-4 text-center text-lg font-semibold">Descripción general de la red</h2>
+	<div class="flex justify-between gap-4">
 		<div>
 			<p class="text-sm text-gray-500">Total Avalanche L1s</p>
 			<p class="text-2xl font-bold">259</p>
