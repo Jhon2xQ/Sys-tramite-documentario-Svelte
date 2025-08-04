@@ -9,7 +9,7 @@
 
 <div>
 	<!-- Header -->
-	<Header />
+	<!-- <Header /> -->
 
 	<!-- Main -->
 	<main class="bg-cover bg-center" style="background-image: url('31-a.jpeg')">

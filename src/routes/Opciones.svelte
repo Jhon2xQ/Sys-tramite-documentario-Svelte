@@ -14,12 +14,12 @@
 				<img src="/document.svg" alt="Tramite Icon" class="mx-auto mt-4 h-24 w-24" />
 				<!-- botón -->
 				<div class="p-6">
-					<button
-						type="button"
-						class="w-35 cursor-pointer rounded-lg border px-5 py-2.5 text-sm font-medium tracking-wider outline-none"
+					<a
+						href="/realizar-tramite"
+						class="inline-block w-35 cursor-pointer rounded-lg border px-5 py-2.5 text-sm font-medium tracking-wider outline-none hover:bg-purple-50"
 					>
 						Realizar trámite
-					</button>
+					</a>
 				</div>
 			</div>
 
